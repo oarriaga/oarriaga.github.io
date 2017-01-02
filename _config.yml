@@ -16,10 +16,7 @@
 title: Octavio Arriaga
 email: arriaga.camargo@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Graduate student in the master program of Autonomous Systems of 
-  Bonn-Rhein-Sieg University, with focus on intelligent robotics,
-  computer vision and machine learning. Strong mathematical background 
-  and experience in developing deep learning systems.
+  personal blog and projects
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  oarriaga
