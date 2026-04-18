@@ -1,0 +1,558 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Octavio Arriaga">
+    <meta
+      name="description"
+      content="Project page for Differentiable Inverse Graphics for
+      Zero-shot Scene Reconstruction and Robot Grasping."
+    >
+
+    <title>
+      Differentiable Inverse Graphics for Zero-shot Scene Reconstruction
+    </title>
+
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="shortcut icon" href="assets/favicon.png">
+    <link rel="stylesheet" type="text/css" href="assets/vendor/lato.css">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/vendor/fontawesome/css/all.min.css"
+    >
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/vendor/academicons/css/academicons.min.css"
+    >
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script defer src="script.js"></script>
+  </head>
+
+  <body>
+    <table class="site-shell">
+      <tbody>
+        <tr>
+          <td>
+            <table class="section-table intro-table">
+              <tbody>
+                <tr>
+                  <td class="intro-copy">
+                    <h1 class="project-title">
+                      Differentiable Inverse Graphics for Zero-shot Scene
+                      Reconstruction and Robot Grasping
+                    </h1>
+                    <p class="authors">
+                      Octavio Arriaga, Proneet Sharma, Jichen Guo, Marc Otto,
+                      Siddhant Kadwe, Rebecca Adam
+                    </p>
+                    <p class="affiliations">
+                      DFKI Robotics Innovation Center, University of Bremen,
+                      Robotics Institute Germany
+                    </p>
+                    <div class="link-button-row project-links">
+                      <a
+                        class="link-button"
+                        href="https://arxiv.org/pdf/2602.05029"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i
+                          class="link-icon-font fas fa-file-pdf"
+                          aria-hidden="true"
+                        ></i>
+                        <span>Paper</span>
+                      </a>
+                      <a
+                        class="link-button"
+                        href="https://arxiv.org/abs/2602.05029"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i
+                          class="link-icon-font ai ai-arxiv"
+                          aria-hidden="true"
+                        ></i>
+                        <span>arXiv</span>
+                      </a>
+                      <a
+                        class="link-button"
+                        href="https://github.com/oarriaga/paz"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i
+                          class="link-icon-font fab fa-github"
+                          aria-hidden="true"
+                        ></i>
+                        <span>Code</span>
+                      </a>
+                      <a
+                        class="link-button"
+                        href="https://github.com/oarriaga/altamira-data/releases/tag/v0.21"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i
+                          class="link-icon-font far fa-images"
+                          aria-hidden="true"
+                        ></i>
+                        <span>Data</span>
+                      </a>
+                      <a class="link-button" href="#bibtex">
+                        <i
+                          class="link-icon-font fas fa-book"
+                          aria-hidden="true"
+                        ></i>
+                        <span>BibTeX</span>
+                      </a>
+                    </div>
+                  </td>
+                  <td class="intro-photo">
+                    <img
+                      src="assets/figures/figure_1/figure.png"
+                      alt="Figure 1 from the paper"
+                      class="intro-figure"
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table class="section-table">
+              <tbody>
+                <tr>
+                  <td class="section-copy section-copy-text section-copy-tldr">
+                    <p class="text-block">
+                        <b>TL;DR:</b> We use physics-based optimization to <b><u>reconstruct scenes</u></b> and grasp unseen objects zero-shot from a single RGBD image, with <b><u>no 3D training data</u></b>.
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+
+
+
+            <table class="section-table">
+              <tbody>
+                <tr>
+                  <td class="section-copy">
+                    <h2>Abstract</h2>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="section-copy section-copy-text">
+                    <p class="text-block">
+                    Operating effectively in novel real-world environments requires robotic systems to estimate and interact with previously unseen objects.
+                    Current state-of-the-art models address this challenge by using large amounts of training data and test-time samples to build black-box scene representations.
+                    In this work, we introduce a differentiable neuro-graphics model that combines neural foundation models with physics-based differentiable rendering to perform zero-shot scene reconstruction and robot grasping without relying on any additional 3D data or test-time samples.
+                    Our model solves a series of constrained optimization problems to estimate physically consistent scene parameters, such as meshes, lighting conditions, material properties, and 6D poses of previously unseen objects from a single RGBD image and bounding boxes.
+                    We evaluated our approach on standard model-free few-shot benchmarks and demonstrated that it outperforms existing algorithms for model-free few-shot pose estimation.
+                    Furthermore, we validated the accuracy of our scene reconstructions by applying our algorithm to a zero-shot grasping task.
+                    By enabling zero-shot, physically-consistent scene reconstruction and grasping without reliance on extensive datasets or test-time sampling, our approach offers a pathway towards more data efficient, interpretable and generalizable robot autonomy in novel environments.
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table class="section-table">
+              <tbody>
+                <tr>
+                  <td class="section-copy section-copy-heading-tight">
+                    <h2>Global Pipeline</h2>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="section-copy section-copy-figure-tight">
+                    <img
+                      src="assets/figures/figure_2/figure.png"
+                      alt="Figure 2 from the paper"
+                      class="wide-figure wide-figure-bleed
+                      global-pipeline-figure"
+                    >
+                    <p class="figure-note global-pipeline-note">
+                      From a single RGBD image and bounding box prompts, our model uses a segmentation model to estimate the object masks. It then initializes a 3D scene by performing a robust probabilistic estimation of object shapes using ellipsoidal primitives. Subsequently, it optimizes the shapes, poses, materials, and lighting conditions with physics-based differentiable rendering by matching rendered views to the real observation. A final mesh optimization stage refines the mesh vertices through a cage-based deformation model.
+                      Finally, the reconstructed scene is used in simulation to find an optimal grasp, which is then performed in reality using the robotic system
+                      The resulting scene representation includes meshes, poses, materials, masks, and lighting conditions.
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table class="section-table">
+              <tbody>
+                <tr>
+                  <td class="section-copy section-copy-heading-tight">
+                    <h2>Differentiable Rendering</h2>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table
+              class="publication-table publication-table-tight
+              publication-table-split"
+            >
+              <tbody>
+                <tr>
+                  <td
+                    class="publication-media publication-media-split
+                    publication-media-tight"
+                  >
+                    <img
+                      src="assets/figures/figure_4/figure.png"
+                      alt="Figure 4 from the paper"
+                      class="publication-thumb publication-thumb-split"
+                    >
+                  </td>
+                  <td
+                    class="publication-copy publication-copy-split
+                    publication-copy-tight"
+                  >
+                    <p>
+                      The renderer compares rendered RGBD observations against
+                      the real input and provides gradients for optimizing
+                      scene parameters. This is the core mechanism that turns
+                      the reconstruction problem into an explicit inverse
+                      optimization problem rather than a black-box prediction.
+                    </p>
+
+                    <ul class="publication-list">
+                      <li>
+                        <b>Physical scene variables:</b> Optimization acts on
+                        interpretable quantities such as object pose, shape,
+                        materials, and lighting, rather than latent features.
+                      </li>
+                      <li>
+                        <b>Scene-to-image rendering:</b> The renderer maps
+                        these interpretable parameters into rendered RGB,
+                        depth, and mask estimates.
+                      </li>
+                      <li>
+                        <b>Inverse graphics formulation:</b> Reconstruction is
+                        posed as finding the scene parameters whose rendered
+                        appearance best explains the observed image.
+                      </li>
+                      <li>
+                        <b>Gradient-based refinement:</b> The mismatch between
+                        rendered and real observations is backpropagated to
+                        update the scene parameters directly.
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table class="section-table">
+              <tbody>
+                <tr>
+                  <td class="section-copy">
+                    <h2>Inverse Optimization</h2>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="section-copy section-copy-figure">
+                    <p class="figure-note">
+                        The reconstruction is solved as a sequential optimization pipeline. The first stage (top-row) optimizes simple spherical object representations together with lighting, materials, and object layout so that the rendered scene matches the observed RGBD image. The second stage (bottom-row) replaces those simple shapes with triangular meshes and refines their geometry through a cage-based deformation model using mean value coordinates. This lets the system preserve the scene structure found in the first stage while optimizing more detailed object shapes that better explain the observation.
+                    </p>
+                    <img
+                      src="assets/figures/figure_6/figure.png"
+                      alt="Figure 6 from the paper"
+                      class="wide-figure wide-figure-bleed
+                      inverse-optimization-figure"
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table class="section-table">
+              <tbody>
+                <tr>
+                  <td class="section-copy">
+                    <h2>Results</h2>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="section-copy section-copy-figure">
+                    <p class="figure-note">
+                        The qualitative results evaluate FewSOL, CLEVR-POSE, MOPED, and LINEMOD-OCCLUDED, demonstrating zero-shot generalization to previously unseen objects. Despite changes in shape, texture, material, clutter, and occlusion, the method recovers consistent object pose and geometry across these datasets.
+                    </p>
+                    <img
+                      src="assets/figures/figure_5/figure.png"
+                      alt="Figure 5 from the paper"
+                      class="wide-figure results-figure"
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table class="section-table">
+              <tbody>
+                <tr>
+                  <td class="section-copy">
+                    <h2>Videos</h2>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table class="section-table">
+              <tbody>
+                <tr>
+                  <td class="section-copy section-copy-tight">
+                    <div class="video-grid">
+                      <figure class="video-card">
+                        <video
+                          controls
+                          playsinline
+                          preload="auto"
+                          poster="assets/shape_030_optimization_poster.png"
+                          class="inline-video"
+                        >
+                          <source
+                            src="assets/shape_030_optimization_h264.mp4"
+                            type="video/mp4"
+                          >
+                          Inline video is unavailable in this browser.
+                          <a href="assets/shape_030_optimization_h264.mp4">
+                            Open the MP4.
+                          </a>
+                        </video>
+                        <figcaption>
+                          Shape optimization for CLEVRPOSE concept 030.
+                        </figcaption>
+                      </figure>
+
+                      <figure class="video-card">
+                        <video
+                          controls
+                          playsinline
+                          preload="auto"
+                          poster="assets/mesh_030_optimization_poster.png"
+                          class="inline-video"
+                        >
+                          <source
+                            src="assets/mesh_030_optimization_h264.mp4"
+                            type="video/mp4"
+                          >
+                          Inline video is unavailable in this browser.
+                          <a href="assets/mesh_030_optimization_h264.mp4">
+                            Open the MP4.
+                          </a>
+                        </video>
+                        <figcaption>
+                          Mesh optimization for CLEVRPOSE concept 030.
+                        </figcaption>
+                      </figure>
+
+                      <figure class="video-card">
+                        <video
+                          controls
+                          playsinline
+                          preload="auto"
+                          poster="assets/mesh_030_optimization_round_poster.png"
+                          class="inline-video"
+                        >
+                          <source
+                            src="assets/mesh_030_optimization_round_h264.mp4"
+                            type="video/mp4"
+                          >
+                          Inline video is unavailable in this browser.
+                          <a href="assets/mesh_030_optimization_round_h264.mp4">
+                            Open the MP4.
+                          </a>
+                        </video>
+                        <figcaption>
+                          Optimized mesh orbit for CLEVRPOSE concept 030.
+                        </figcaption>
+                      </figure>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table class="section-table">
+              <tbody>
+                <tr>
+                  <td class="section-copy section-copy-heading-tight">
+                    <h2>Robot Grasping</h2>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table
+              class="publication-table publication-table-tight
+              publication-table-split"
+            >
+              <tbody>
+                <tr>
+                  <td
+                    class="publication-media publication-media-split
+                    publication-media-tight"
+                  >
+                    <img
+                      src="assets/figures/figure_7/figure.png"
+                      alt="Robot grasping setup from the paper"
+                      class="publication-thumb publication-thumb-split"
+                    >
+                  </td>
+                  <td
+                    class="publication-copy publication-copy-split
+                    publication-copy-tight"
+                  >
+                    <p>
+                      The reconstructed scene is used to evaluate candidate
+                      grasps in simulation and then execute the best grasp on
+                      the robot with the UR5 arm, Mia hand, and D405 camera.
+                    </p>
+
+                    <ul class="publication-list">
+                      <li>
+                        <b>Zero-shot grasping:</b> The perception pipeline
+                        enables grasping unseen objects without CAD models, grasp-specific
+                        training data or additional 3D supervision.
+                      </li>
+                      <li>
+                        <b>Broad evaluation:</b> We ran 224 real-world grasp
+                        trials across 10 diverse YCB objects varying in size, weight, transparency, and symmetry.
+                      </li>
+                      <li>
+                        <b>Strong transfer:</b> Using a very simple grasping policy the system achieved an 89.3% overall grasp success rate on the physical robot.
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table class="section-table" id="bibtex">
+              <tbody>
+                <tr>
+                  <td class="section-copy section-copy-tight">
+                    <div class="bibtex-header">
+                      <h2>BibTeX</h2>
+                      <button
+                        id="copy-bibtex"
+                        class="copy-button"
+                        type="button"
+                      >
+                        <i
+                          class="copy-icon far fa-copy"
+                          aria-hidden="true"
+                        ></i>
+                        <span>Copy BibTeX</span>
+                      </button>
+                    </div>
+                    <p id="copy-status" class="copy-status" aria-live="polite">
+                    </p>
+                    <pre
+                      class="bibtex-block"
+                      id="bibtex-block"
+                    >@misc{arriaga2026differentiable,
+  title={Differentiable Inverse Graphics for Zero-shot Scene Reconstruction and Robot Grasping},
+  author={Arriaga, Octavio and Sharma, Proneet and Guo, Jichen and Otto, Marc and Kadwe, Siddhant and Adam, Rebecca},
+  year={2026},
+  eprint={2602.05029},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO},
+  doi={10.48550/arXiv.2602.05029},
+  url={https://arxiv.org/abs/2602.05029}
+}</pre>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table class="section-table footer-table">
+              <tbody>
+                <tr>
+                  <td class="section-copy footer-copy">
+                    <div class="link-button-row footer-links">
+                      <a
+                        class="link-button"
+                        href="https://oarriaga.github.io/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i
+                          class="link-icon-font fas fa-home"
+                          aria-hidden="true"
+                        ></i>
+                        <span>Website</span>
+                      </a>
+                      <a
+                        class="link-button"
+                        href="https://arxiv.org/pdf/2602.05029"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i
+                          class="link-icon-font fas fa-file-pdf"
+                          aria-hidden="true"
+                        ></i>
+                        <span>Paper</span>
+                      </a>
+                      <a
+                        class="link-button"
+                        href="https://arxiv.org/abs/2602.05029"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i
+                          class="link-icon-font ai ai-arxiv"
+                          aria-hidden="true"
+                        ></i>
+                        <span>arXiv</span>
+                      </a>
+                      <a
+                        class="link-button"
+                        href="https://github.com/oarriaga/paz"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i
+                          class="link-icon-font fab fa-github"
+                          aria-hidden="true"
+                        ></i>
+                        <span>Code</span>
+                      </a>
+                      <a
+                        class="link-button"
+                        href="https://github.com/oarriaga/altamira-data/releases/tag/v0.21"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i
+                          class="link-icon-font far fa-images"
+                          aria-hidden="true"
+                        ></i>
+                        <span>Data</span>
+                      </a>
+                      <a class="link-button" href="#bibtex">
+                        <i
+                          class="link-icon-font fas fa-book"
+                          aria-hidden="true"
+                        ></i>
+                        <span>BibTeX</span>
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

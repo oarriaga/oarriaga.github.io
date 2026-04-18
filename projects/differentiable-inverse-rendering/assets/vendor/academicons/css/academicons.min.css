@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Academicons';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url('../fonts/academicons.woff') format('woff');
+}
+
+.ai {
+  display: inline-block;
+  font-family: 'Academicons';
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 1;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ai-arxiv:before {
+  content: "\e974";
+}

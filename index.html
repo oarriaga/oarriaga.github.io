@@ -1,151 +1,567 @@
----
-title: /home
-layout: home
-permalink: /
----
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Octavio Arriaga">
+    <meta
+      name="description"
+      content="Octavio Arriaga is a robotics researcher working on probabilistic machine learning, computer vision, and physics-informed robot learning."
+    >
 
-<h2> Projects: </h2>
+    <title>Octavio Arriaga</title>
 
-<!-- Portfolio Gallery Grid -->
+    <link rel="stylesheet" type="text/css" href="assets/vendor/lato.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  </head>
 
-<div class="row">
+  <body>
+    <table class="site-shell">
+      <tbody>
+        <tr>
+          <td>
+            <table class="section-table intro-table">
+              <tbody>
+                <tr>
+                  <td class="intro-copy">
+                    <p class="name">Octavio Arriaga</p>
+                    <p>
+                      I am a research scientist at the
+                    <a href="https://www.dfki.de/en/web" target="_blank" rel="noopener noreferrer">
+                    German Research Center for Artificial Intelligence, Robotics Innovation Center
+                    </a>
+                     (DFKI-RIC) in Bremen.
+                     My research areas include probabilistic machine learning, computer vision, and physics for robotic applications.
+                     <!-- I am interested in making robots learn new skills from limited data and experience. -->
+                    </p>
+                    <p class="profile-links">
+                      <a
+                        href="https://github.com/oarriaga"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        GitHub
+                      </a>
+                    </p>
+                  </td>
+                  <td class="intro-photo">
+                    <div
+                      class="profile-photo"
+                      role="img"
+                      aria-label="Portrait of Octavio Arriaga"
+                    ></div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
 
-  <div class="column">
-    <div class="content">
-        <h4>RBF-Network <br> (pure-numpy)</h4>
-         <div class="w3-container">
-            <img class="object-fit_cover" src="assets/images/RBF-Network.png" style="width:100%">
-                <div class="overlay overlayFade">
-                    <div class=text> Simple radial basis function network with pure numpy </div>
-                </div>
-        </div>
-        <p><a href="url">code</a> </p>
-    </div>
-  </div>
+            <table class="section-table">
+              <tbody>
+                <tr>
+                  <td class="section-copy">
+                    <h2>Research</h2>
+                    <p>
+                      <!-- People can often learn from only a few interactions, robots still tend to require large amounts of data and struggle to adapt to new situations. My current research studies how cognitive components shaped by evolution can be explicitly encoded in robotic learning systems. More concretely, I combine differentiable physics with probabilistic program synthesis to reduce sample complexity and improve generalization. -->
+                      My research combines differentiable physics, probabilistic programming, and program synthesis to reduce sample and model complexity and improve generalization for robot learning tasks.
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
 
-  <div class="column">
-    <div class="content">
-        <h4>Real-time <br> Face Recognition</h4>
-        <div class="w3-container">
-            <img class="object-fit_cover" src="assets/images/emotion_recognition.jpg" style="width:100%">
-                <div class="overlay overlayFade">
-                    <div class=text> Real-time emotion and sex classification with xception modules </div>
-                </div>
-        </div>
-        <p> <a href="url">paper</a> / <a href="url">code</a> </p>
-    </div>
-  </div>
+            <table class="publication-table">
+              <tbody>
+                <tr>
+                  <td class="publication-media">
+                    <img
+                      src="images/publications/differentiable_inverse_graphics.png"
+                      alt="Differentiable Inverse Graphics thumbnail"
+                      class="publication-thumb"
+                    >
+                  </td>
+                  <td class="publication-copy">
+                    <span class="papertitle">
+                      <a
+                        href="https://arxiv.org/pdf/2602.05029"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Differentiable Inverse Graphics for Zero-shot Scene
+                        Reconstruction and Robot Grasping
+                      </a>
+                    </span>
+                    <br>
+                    <strong>Octavio Arriaga</strong>, Proneet Sharma, Jichen Guo, Marc Otto, Siddhant Kadwe, Rebecca Adam
+                    <br>
+                    <em>arXiv</em>, 2026
+                    <br>
+                    <a href="https://arxiv.org/pdf/2602.05029">arXiv</a> /
+                    <a href="https://github.com/oarriaga/paz" target="_blank" rel="noopener noreferrer">code</a> /
+                    <a href="projects/differentiable-inverse-rendering/">project page</a>
+                    <p>
+                    	We built a differentiable ray tracer for meshes and a novel multi-stage constrained based optimization pipeline to <b><u>reconstruct unseen scenes without training data</u></b> using a single observation.
+					  	Furthermore, we validated the accuracy of our scene reconstructions by applying our method to a zero-shot robot grasping task.
+                    </p>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="publication-media">
+                    <img
+                      src="images/publications/bayesian_inverse_physics.png"
+                      alt="Bayesian Inverse Physics thumbnail"
+                      class="publication-thumb"
+                    >
+                  </td>
+                  <td class="publication-copy">
+                    <span class="papertitle">
+                        <a href="https://arxiv.org/pdf/2506.08756.pdf" target="_blank" rel="noopener noreferrer">
+                          Bayesian Inverse Physics for Neuro-Symbolic Robot Learning
+                        </a>
+                     </span>
+                    <br>
+                    <strong>Octavio Arriaga</strong>, Rebecca Adam, Melvin Laux, Lisa Gutzeit, Marco Ragni, Jan Peters, Frank Kirchner
+                    <br>
+                    <em><a href="https://2025.nesyconf.org/" target="_blank" rel="noopener noreferrer"> NeSy, 2025</a></em> <span class="oral-presentation">(Oral Presentation)</span>
+                    <br>
+                        <a href="https://proceedings.mlr.press/v284/arriaga25a.html" target="_blank" rel="noopener noreferrer">paper</a> /
+                        <a href="https://arxiv.org/pdf/2506.08756.pdf" target="_blank" rel="noopener noreferrer">arXiv</a> /
+                        <a href="https://openreview.net/forum?id=YeT4WtG47d" target="_blank" rel="noopener noreferrer">open review</a> /
+						<a href="images/publications/NESY_2025_POSTER.pdf" target="_blank" rel="noopener noreferrer">poster</a>
+                    <p>
+					In this paper we argue for the following points in machine and robot learning: <br>
+					▶ Learning algorithms shouldn’t ignore the most accurate predictive models of our world. <br>
+ 					▶  Performance increases with more data, yet it remains insufficient for robot autonomy. <br>
+					▶  We cannot trust the probabilities of a model that we do not understand. <br>
+                    </p>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="publication-media">
+                    <img
+                      src="images/publications/bayesian_inverse_graphics.png"
+                      alt="Bayesian Inverse Graphics thumbnail"
+                      class="publication-thumb"
+                    >
+                  </td>
+                  <td class="publication-copy">
+					<span class="papertitle">
+						<!-- <a href="https://link.springer.com/chapter/10.1007/978-3-031-71167-1_8"> -->
+                    	<a href="https://link.springer.com/chapter/10.1007/978-3-031-71167-1_8" target="_blank" rel="noopener noreferrer">
+						Bayesian Inverse Graphics for Few-shot Concept Learning
+						</a>
+					</span>
+                    <br>
+                    <strong>Octavio Arriaga</strong>, Jichen Guo, Rebecca Adam, Sebastian Houben, Frank Kirchner
+                    <br>
+                    <em><a href="https://sites.google.com/view/nesy2024" target="_blank" rel="noopener noreferrer"> NeSy, 2024</a></em>
+                    <br>
+                    	<a href="https://link.springer.com/chapter/10.1007/978-3-031-71167-1_8" target="_blank" rel="noopener noreferrer">paper</a> /
+                    	<a href="https://arxiv.org/pdf/2409.08351" target="_blank" rel="noopener noreferrer">arXiv</a> /
+                    	<a href="https://github.com/oarriaga/bayesian-inverse-graphics" target="_blank" rel="noopener noreferrer">code</a> /
+                    	<a href="https://raw.githubusercontent.com/oarriaga/bayesian-inverse-graphics/refs/heads/main/images/poster.png" target="_blank" rel="noopener noreferrer">poster</a>
+                    <p>
+					  Current few-shot learning models have billions of parameters and use billions of training samples.
+					  In this paper we present a few-shot classifier that: <br>
+						▶ Generalizes with only few training samples. <br>
+						▶ Uses only tenths of parameters. <br>
+					  The proposed model combines probabilistic reasoning, physics-based rendering, and a neural similarity metric to achieve strong few-shot generalization with limited data and parameters.
+                    </p>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="publication-media">
+                    <img
+                      src="images/publications/difficulty_estimation.png"
+                      alt="Difficulty Estimation thumbnail"
+                      class="publication-thumb"
+                    >
+                  </td>
+                  <td class="publication-copy">
+					<span class="papertitle">
+						<a href="https://openaccess.thecvf.com/content/CVPR2023W/LatinX/papers/Arriaga_Difficulty_Estimation_With_Action_Scores_for_Computer_Vision_Tasks_CVPRW_2023_paper.pdf" target="_blank" rel="noopener noreferrer">
+						Difficulty Estimation with Action Scores for Computer Vision Tasks
+						</a>
+					</span>
+                    <br>
+                    <strong>Octavio Arriaga</strong>, Sebastian Palacio, Matias Valdenegro-Toro
+                    <br>
+                    <em>CVPR Workshops</em>, 2023  <span class="oral-presentation">(Best Paper Award)</span>
+
+                    <br>
+                    <a href="https://openaccess.thecvf.com/content/CVPR2023W/LatinX/papers/Arriaga_Difficulty_Estimation_With_Action_Scores_for_Computer_Vision_Tasks_CVPRW_2023_paper.pdf" target="_blank" rel="noopener noreferrer">paper</a>
+                    <p>
+ 					We present an <b><u>unsupervised method for calculating a difficulty sample score.</u></b> Our method: <br>
+					▶ Does not require any modification to the model. <br>
+					▶ Does not require external supervision. <br>
+					▶ It can be easily applied to a wide range of machine learning tasks. <br>
+					We provide results for image classification, image segmentation, and object detection tasks.
+                    </p>
+                  </td>
+                </tr>
 
 
-  <div class="column">
-    <div class="content">
-        <h4>Domain Randomization w/ Blender</h4>
-        <div class="w3-container">
-        <img class="object-fit_cover" src="assets/images/beauvoir.png" style="width:100%">
-                <div class="overlay overlayFade">
-                    <div class=text> Synthetic data creation for classification and object detection using Blender </div>
-                </div>
-        </div>
-        <p> <a href="url">paper</a> / <a href="url">code</a> </p>
-    </div>
-  </div>
+				<tr>
+                  <td class="publication-media">
+                    <img
+                      src="images/publications/world_models.png"
+                      alt="PhysWM thumbnail"
+                      class="publication-thumb"
+                    >
+                  </td>
+                  <td class="publication-copy">
+                    <span class="papertitle">
+                        <a href="https://ceur-ws.org/Vol-3432/paper24.pdf" target="_blank" rel="noopener noreferrer">
+                          PhysWM: Physical World Models for Robot Learning
+                        </a>
+                    </span>
+                    <br>
+                    Marc Otto, <strong>Octavio Arriaga</strong>, Chandandeep Singh, Jichen Guo, Frank Kirchner
+                    <br>
+                    <em><a href="https://sites.google.com/view/nesy2023" target="_blank" rel="noopener noreferrer"> NeSy, 2023</a></em>
+                    <br>
+                    <a href="https://ceur-ws.org/Vol-3432/paper24.pdf">paper</a>
+                    <p>
+                        In this paper, we introduce PhysWM, a framework for robot learning that unifies differentiable physics, rendering, and Bayesian inference into an adaptable physical world model. The result is a more efficient and interpretable approach that allows robots to estimate uncertainty, improve their internal models through exploration.
+                    </p>
+                  </td>
+                </tr>
 
 
+                <tr>
+                  <td class="publication-media">
+                    <img
+                      src="images/publications/saliency_maps.png"
+                      alt="Sanity Checks for Saliency Methods thumbnail"
+                      class="publication-thumb"
+                    >
+                  </td>
+                  <td class="publication-copy">
+                    <a href="https://research.rug.nl/en/publications/sanity-checks-for-saliency-methods-explaining-object-detectors/">
+                      <span class="papertitle">Sanity Checks for Saliency Methods Explaining Object Detectors</span>
+                    </a>
+                    <br>
+                    Deepan Chakravarthi Padmanabhan, Paul G. Ploger, <strong>Octavio Arriaga</strong>, Matias Valdenegro-Toro
+                    <br>
+                    <em>xAI</em>, 2023
+                    <br>
+                    <a href="https://arxiv.org/pdf/2306.02424">PDF</a>
+                    <p>
+                      We extend saliency-method sanity checks to object detectors and show that detector
+                      architecture often matters more than the explanation method itself.
+                    </p>
+                  </td>
+                </tr>
 
-</div>
-<!-- END FIRST ROW-->
-
-
-<div class="row">
-
-
-  <div class="column">
-    <div class="content">
-        <h4>Spatial Transformer Networks</h4>
-        <div class="w3-container">
-            <img class="object-fit_cover" src="assets/images/STN_digit.png" style="width:100%">
-                <div class="overlay overlayFade">
-                    <div class=text> Implementation of the Spatial Transformer Networks as attention for classification </div>
-                </div>
-        </div>
-        <p> <a href="url">paper</a> / <a href="url">code</a> </p>
-    </div>
-  </div>
-
-  <div class="column">
-    <div class="content">
-        <h4>Neural Captioning of Dangerous Situations</h4>
-        <div class="w3-container">
-        <img class="object-fit_cover" src="assets/images/neural_image_caption_dangerous.png" style="width:100%">
-                <div class="overlay overlayFade">
-                    <div class=text> Neural Image Captioning for dangerous situations </div>
-                </div>
-        </div>
-        <p> <a href="url">paper</a> / <a href="url">code</a> </p>
-    </div>
-  </div>
-
-
-  <div class="column">
-    <div class="content">
-        <h4>Self-Organizing Map (pure-numpy) <br> </h4>
-         <div class="w3-container">
-            <img class="object-fit_cover" src="assets/images/SOM_with_MNIST.png" style="width:100%">
-                <div class="overlay overlayFade">
-                    <div class=text> Self-organizing map with pure numpy </div>
-                </div>
-        </div>
-        <p><a href="url">code</a> </p>
-    </div>
-  </div>
-
-</div>
-
-
-<div class="row">
-
-  <div class="column">
-    <div class="content">
-        <h4>Neural Image Captioning<br> </h4>
-         <div class="w3-container">
-            <img class="object-fit_cover" src="assets/images/neural_image_caption.png" style="width:100%">
-                <div class="overlay overlayFade">
-                    <div class=text> Neural image captioning model </div>
-                </div>
-        </div>
-        <p><a href="url">code</a> </p>
-    </div>
-  </div>
+                <tr>
+                  <td class="publication-media">
+                    <img
+                      src="images/publications/dext.png"
+                      alt="DExT thumbnail"
+                      class="publication-thumb"
+                    >
+                  </td>
+                  <td class="publication-copy">
+                    <a href="https://research.rug.nl/en/publications/dext-detector-explanation-toolkit/">
+                      <span class="papertitle">DExT: Detector Explanation Toolkit</span>
+                    </a>
+                    <br>
+                    Deepan Chakravarthi Padmanabhan, Paul G. Ploger, <strong>Octavio Arriaga</strong>, Matias Valdenegro-Toro
+                    <br>
+                    <em>xAI</em>, 2023
+                    <br>
+                    <a href="https://arxiv.org/pdf/2212.11409">PDF</a>
+                    <p>
+                      We present an open-source toolkit for explaining object detector predictions,
+                      including both class decisions and bounding boxes, across multiple detector
+                      architectures.
+                    </p>
+                  </td>
+                </tr>
 
 
- <div class="column">
-    <div class="content">
-        <h4>Pathnet <br> (keras w/ tensorflow)<br> </h4>
-         <div class="w3-container">
-            <img class="object-fit_cover" src="assets/images/pathnet.png" style="width:100%">
-                <div class="overlay overlayFade">
-                    <div class=text> PathNet: Evolution Channels Gradient Descent in Super Neural Networks </div>
-                </div>
-        </div>
-        <p><a href="url">code</a> </p>
-    </div>
-  </div>
+                <tr>
+                  <td class="publication-media">
+                    <img
+                      src="images/publications/robot_dance.png"
+                      alt="Robot Dance Generation thumbnail"
+                      class="publication-thumb"
+                    >
+                  </td>
+                  <td class="publication-copy">
+                    <a href="https://ieeexplore.ieee.org/abstract/document/9981462/">
+                      <span class="papertitle">Robot Dance Generation with Music Based Trajectory Optimization</span>
+                    </a>
+                    <br>
+                    Melya Boukheddimi, Daniel Harnack, Shivesh Kumar, Rohit Kumar, Shubham Vyas, <strong>Octavio Arriaga</strong>, Frank Kirchner
+                    <br>
+                    <em>IROS</em>, 2022
+                    <p>
+                      We formulate robot dance generation as trajectory optimization aligned with musical
+                      structure, enabling expert-guided, imitative, and automatically generated
+                      choreographies.
+                    </p>
+                  </td>
+                </tr>
 
- <div class="column">
-    <div class="content">
-        <h4>2D det, robust LR</h4>
-         <div class="w3-container">
-            <img class="object-fit_cover" src="assets/images/pathnet.png" style="width:100%">
-                <div class="overlay overlayFade">
-                    <div class=text> Hello World! </div>
-                </div>
-        </div>
-        <p><a href="url">code</a> </p>
-    </div>
-  </div>
+                <tr>
+                  <td class="publication-media">
+                    <img
+                      src="images/publications/context.png"
+                      alt="Context-based intention recognition thumbnail"
+                      class="publication-thumb"
+                    >
+                  </td>
+                  <td class="publication-copy">
+                    <a href="https://www.dfki.de/en/web/research/projects-and-publications/publication/12351">
+                      <span class="papertitle">A Bayesian Approach to Context-based Recognition of Human Intention for Context-Adaptive Robot Assistance in Space Missions</span>
+                    </a>
+                    <br>
+                    Adrian Auer, <strong>Octavio Arriaga</strong>, Teena Hassan, Nina Hoyer, Elsa Andrea Kirchner
+                    <br>
+                    <em>SpaceCHI 2.0</em>, 2022
+                    <p>
+                      We combine context recognition modules with a two-layer Bayesian network to infer
+                      astronaut intentions for context-adaptive robot assistance in space missions.
+                    </p>
+                  </td>
+                </tr>
 
+                <tr>
+                  <td class="publication-media">
+                    <img
+                      src="images/publications/mosquitos.png"
+                      alt="Mosquito classification thumbnail"
+                      class="publication-thumb"
+                    >
+                  </td>
+                  <td class="publication-copy">
+                    <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0234959">
+                      <span class="papertitle">Optimization of Convolutional Neural Network Hyperparameters for Automatic Classification of Adult Mosquitoes</span>
+                    </a>
+                    <br>
+                    Daniel Motta, Alex Alisson Bandeira Santos, Bruna Aparecida Souza Machado, Otavio G. V. Ribeiro-Filho, <strong>Luis Octavio Arriaga Camargo</strong>, Matias A. Valdenegro-Toro, Frank Kirchner, Roberto Badaro
+                    <br>
+                    <em>PLOS ONE</em>, 2020
+                    <br>
+                    <a href="https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0234959&amp;type=printable">PDF</a>
+                    <p>
+                      We optimize CNN architectures and training hyperparameters for automatic mosquito
+                      classification, improving species recognition and Aedes detection from entomological
+                      images.
+                    </p>
+                  </td>
+                </tr>
 
+                <tr>
+                  <td class="publication-media">
+                    <img
+                      src="images/publications/paz.png"
+                      alt="PAZ thumbnail"
+                      class="publication-thumb"
+                    >
+                  </td>
+                  <td class="publication-copy">
+                    <a href="https://arxiv.org/abs/2010.14541">
+                      <span class="papertitle">Perception for Autonomous Systems (PAZ)</span>
+                    </a>
+                    <br>
+                    <strong>Octavio Arriaga</strong>, Matias Valdenegro-Toro, Mohandass Muthuraja, Sushma Devaramani, Frank Kirchner
+                    <br>
+                    <em>arXiv</em>, 2020
+                    <br>
+                    <a href="https://arxiv.org/pdf/2010.14541">PDF</a> /
+                    <a href="https://github.com/oarriaga/paz">Code</a>
+                    <p>
+                      We introduce PAZ, a hierarchical perception library for building reusable training
+                      and inference pipelines across robotics and computer-vision tasks.
+                    </p>
+                  </td>
+                </tr>
 
-</div>
+                <tr>
+                  <td class="publication-media">
+                    <img
+                      src="images/publications/unsupervised_difficulty.png"
+                      alt="Unsupervised Difficulty Estimation thumbnail"
+                      class="publication-thumb"
+                    >
+                  </td>
+                  <td class="publication-copy">
+                    <a href="https://arxiv.org/abs/2011.11461">
+                      <span class="papertitle">Unsupervised Difficulty Estimation with Action Scores</span>
+                    </a>
+                    <br>
+                    <strong>Octavio Arriaga</strong>, Matias Valdenegro-Toro
+                    <br>
+                    <em>arXiv</em>, 2020
+                    <br>
+                    <a href="https://arxiv.org/pdf/2011.11461">PDF</a>
+                    <p>
+                      We introduce the action score as a lightweight callback-based measure of sample
+                      difficulty that helps analyze model behavior and dataset bias without extra
+                      supervision.
+                    </p>
+                  </td>
+                </tr>
 
+                <tr>
+                  <td class="publication-media">
+                    <img
+                      src="images/publications/black-box-scales.png"
+                      alt="Black-box optimization of detector scales thumbnail"
+                      class="publication-thumb"
+                    >
+                  </td>
+                  <td class="publication-copy">
+                    <a href="https://arxiv.org/abs/2010.15823">
+                      <span class="papertitle">Black-Box Optimization of Object Detector Scales</span>
+                    </a>
+                    <br>
+                    Mohandass Muthuraja, <strong>Octavio Arriaga</strong>, Paul G. Ploger, Frank Kirchner, Matias Valdenegro-Toro
+                    <br>
+                    <em>arXiv</em>, 2020
+                    <br>
+                    <a href="https://arxiv.org/pdf/2010.15823">PDF</a>
+                    <p>
+                      We use black-box optimization to tune detector scales and input sizes, improving
+                      object-detection performance without manual hyperparameter search.
+                    </p>
+                  </td>
+                </tr>
 
+                <tr>
+                  <td class="publication-media">
+                    <img
+                      src="images/publications/emotion.png"
+                      alt="Emotion and gender classification thumbnail"
+                      class="publication-thumb"
+                    >
+                  </td>
+                  <td class="publication-copy">
+                    <a href="https://arxiv.org/abs/1710.07557">
+                      <span class="papertitle">Real-time CNNs for Emotion and Gender Classification</span>
+                    </a>
+                    <br>
+                    <strong>Octavio Arriaga</strong>, Matias Valdenegro-Toro, Paul G. Ploger
+                    <br>
+                    <em>ESANN</em>, 2019
+                    <br>
+                    <a href="https://arxiv.org/pdf/1710.07557">PDF</a> /
+                    <a href="https://github.com/oarriaga/face_classification">Code</a>
+                    <p>
+                      We proposed a general framework for designing real-time CNNs for robotic platforms.
+                      By eliminating fully connected layers and leveraging depth-wise separable
+                      convolutions, we reduced the model parameters by 80% while maintaining human-level
+                      accuracy (96% for gender, 66% for emotion).
+                    </p>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="publication-media">
+                    <img
+                      src="images/publications/dagon.png"
+                      alt="Multi-context models for autonomous underwater vehicles thumbnail"
+                      class="publication-thumb"
+                    >
+                  </td>
+                  <td class="publication-copy">
+                    <a href="https://ieeexplore.ieee.org/abstract/document/8729823/">
+                      <span class="papertitle">Learning of Multi-Context Models for Autonomous Underwater Vehicles</span>
+                    </a>
+                    <br>
+                    Bilal Wehbe, <strong>Octavio Arriaga</strong>, Mario Michael Krell, Frank Kirchner
+                    <br>
+                    <em>AUV</em>, 2018
+                    <br>
+                    <a href="https://arxiv.org/pdf/1809.06179">PDF</a>
+                    <p>
+                      We learn multiple context-dependent underwater vehicle dynamics with recurrent
+                      models, improving robustness to changing operating conditions.
+                    </p>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="publication-media">
+                    <img
+                      src="images/publications/dangerous_situations.png"
+                      alt="Dangerous situations thumbnail"
+                      class="publication-thumb"
+                    >
+                  </td>
+                  <td class="publication-copy">
+                    <a href="https://arxiv.org/abs/1711.02578">
+                      <span class="papertitle">Image Captioning and Classification of Dangerous Situations</span>
+                    </a>
+                    <br>
+                    <strong>Octavio Arriaga</strong>, Paul G. Ploger, Matias Valdenegro-Toro
+                    <br>
+                    <em>arXiv</em>, 2017
+                    <br>
+                    <a href="https://arxiv.org/pdf/1711.02578">PDF</a>
+                    <p>
+                      We introduce a dataset and deep model for classifying and describing dangerous
+                      scenes such as fires, injuries, and accidents from a single image.
+                    </p>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="publication-media">
+                    <img
+                      src="images/publications/scene-understanding.png"
+                      alt="Scene understanding thumbnail"
+                      class="publication-thumb"
+                    >
+                  </td>
+                  <td class="publication-copy">
+                    <a href="https://pub.h-brs.de/frontdoor/index/index/docId/3042">
+                      <span class="papertitle">Scene Understanding through Deep Learning</span>
+                    </a>
+                    <br>
+                    <strong>Luis Octavio Arriaga Camargo</strong>
+                    <br>
+                    <em>Technical Report</em>, 2017
+                    <p>
+                      This technical report surveys scene understanding for robotics and introduces early
+                      work on anomaly description and classification with deep learning.
+                    </p>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="publication-media">
+                    <img
+                      src="images/publications/satellite.png"
+                      alt="Dumbbell satellites thumbnail"
+                      class="publication-thumb"
+                    >
+                  </td>
+                  <td class="publication-copy">
+                    <a href="https://www.e-ndst.kiev.ua/v15n4/1(53).pdf">
+                      <span class="papertitle">Synchronization of Dumbbell Satellites: Generalized Hamiltonian Systems Approach</span>
+                    </a>
+                    <br>
+                    <strong>Luis Octavio Arriaga Camargo</strong>, R. Martinez-Clark, C. Cruz-Hernandez, A. Arellano-Delgado, R. M. Lopez-Gutierrez
+                    <br>
+                    <em>Nonlinear Dynamics and Systems Theory</em>, 2015
+                    <br>
+                    <a href="https://www.e-ndst.kiev.ua/v15n4/1(53).pdf">PDF</a>
+                    <p>
+                      We study attitude synchronization for dumbbell satellites using a generalized
+                      Hamiltonian formulation and observer-based control design.
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

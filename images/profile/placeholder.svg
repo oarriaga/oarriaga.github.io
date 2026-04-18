@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="title desc">
+  <title id="title">Portrait placeholder</title>
+  <desc id="desc">Circular placeholder image for Octavio Arriaga's portrait.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#d8dde6" />
+      <stop offset="100%" stop-color="#aeb7c5" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#bg)" />
+  <circle cx="400" cy="315" r="135" fill="#eef2f7" />
+  <path
+    d="M190 660c34-112 120-177 210-177s176 65 210 177"
+    fill="#eef2f7"
+  />
+  <text
+    x="400"
+    y="738"
+    fill="#ffffff"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="42"
+    letter-spacing="7"
+    text-anchor="middle"
+  >
+    PORTRAIT
+  </text>
+</svg>
