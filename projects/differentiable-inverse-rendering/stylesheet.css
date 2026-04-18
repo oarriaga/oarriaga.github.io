@@ -422,6 +422,20 @@ strong {
   margin-bottom: 0;
 }
 
+.footer-meta {
+  margin: 12px 0 0;
+  color: #666666;
+}
+
+.footer-meta a {
+  color: inherit;
+}
+
+.footer-meta a:hover,
+.footer-meta a:focus {
+  color: #111111;
+}
+
 @media (max-width: 900px) {
   .intro-table,
   .intro-table tbody,

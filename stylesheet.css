@@ -39,9 +39,18 @@ a:focus {
   text-decoration: none;
 }
 
+h1,
 h2 {
   margin: 0 0 10px;
   font-weight: 400;
+}
+
+h1 {
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+h2 {
   font-size: 16px;
 }
 
@@ -159,6 +168,38 @@ strong {
   margin-bottom: 0;
 }
 
+.policy-copy {
+  padding-top: 28px;
+}
+
+.policy-copy p {
+  max-width: 580px;
+}
+
+.page-footer-table {
+  margin-top: 6px;
+}
+
+.page-footer-copy {
+  padding-top: 20px;
+  padding-bottom: 36px;
+  text-align: center;
+}
+
+.page-footer-copy p {
+  margin: 0;
+  color: #666666;
+}
+
+.page-footer-copy a {
+  color: inherit;
+}
+
+.page-footer-copy a:hover,
+.page-footer-copy a:focus {
+  color: #111111;
+}
+
 @media (max-width: 700px) {
   .intro-table,
   .intro-table tbody,
@@ -198,6 +239,10 @@ strong {
 
   .publication-copy {
     padding: 10px 20px 18px;
+  }
+
+  .policy-copy {
+    padding-top: 24px;
   }
 }
 
